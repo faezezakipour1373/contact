@@ -40,3 +40,23 @@ sabt.addEventListener("click", function () {
   random.innerHTML = `${Math.floor(Math.random() * 10000000)}`;
 
 });
+//top
+$(document).ready(function () {
+  $(document).on("scroll", function () {
+    let st = $(this).scrollTop();
+    if (st > 350) {
+      $("#top").fadeIn(350);
+    } else {
+      $("#top").fadeOut(350);
+    }
+  });
+  $("#top").click(function () {
+    $("html,body").animate(
+      {
+        scrollTop: 0,
+      },
+      500,
+      "swing"
+    );
+  });
+});
